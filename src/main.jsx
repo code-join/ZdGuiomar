@@ -1,12 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// CSS
 import './index.css'
 
-// React Router
+// App
+import App from './App.jsx'
+
+// React e Router
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+// Routes (Pages)
 import Home from './routes/Home.jsx';
-import Details from './routes/Details.jsx';
+import Gallery from './routes/Gallery.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -17,11 +22,11 @@ const router = createBrowserRouter([
 				path: '/ZdGuiomar/',
 				element: <Home />,
 			},
-			{
-				path: '/ZdGuiomar/details',
-				element: <Details />,
-			},
 		],
+	},
+	{
+		path: '/ZdGuiomar/fotos',
+		element: <Gallery />,
 	},
 ]);
 

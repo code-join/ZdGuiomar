@@ -3,7 +3,7 @@ export const jobs = [
 		id: 1,
 		id_name: 'mapa-de-palco',
 		tech: 'Mapa de palco',
-		href: 'mapa_de_palco.jpg',
+		href: 'img/mapa_de_palco.jpg',
 	},
 	{
 		id: 2,

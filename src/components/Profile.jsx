@@ -2,7 +2,7 @@
 import './Profile.css';
 
 // Image
-import avatar from '../assets/img/avatar.png';
+import avatar from 'img/avatar.png';
 
 const Profile = () => {
 	return (

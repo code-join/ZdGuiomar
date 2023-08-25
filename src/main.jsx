@@ -9,20 +9,20 @@ import Home from './routes/Home.jsx';
 import Details from './routes/Details.jsx';
 
 const router = createBrowserRouter([
-  {
-    path: '/ZdG/',
-    element: <App />,
-    children: [
-      {
-        path: '/ZdG/',
-        element: <Home />
-      },
-      {
-        path: '/ZdG/details',
-        element: <Details />
-      }
-    ]
-  }
+	{
+		path: '/ZdGuiomar/',
+		element: <App />,
+		children: [
+			{
+				path: '/ZdGuiomar/',
+				element: <Home />,
+			},
+			{
+				path: '/ZdGuiomar/details',
+				element: <Details />,
+			},
+		],
+	},
 ]);
 
 

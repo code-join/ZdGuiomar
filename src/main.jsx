@@ -22,11 +22,11 @@ const router = createBrowserRouter([
 				path: '/ZdGuiomar/',
 				element: <Home />,
 			},
-			{
-				path: '/ZdGuiomar/fotos',
-				element: <Gallery />
-			},
 		],
+	},
+	{
+		path: '/ZdGuiomar/fotos',
+		element: <Gallery />,
 	},
 ]);
 

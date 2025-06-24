@@ -12,21 +12,21 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 # Esta versão do checkout ainda é válida e comum
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v1 # Esta versão do setup-node ainda é válida e comum
         with:
           node-version: 16
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        uses: bahmutov/npm-install@v1 # Esta ação específica não é afetada
 
       - name: Build project
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4 # <<< ATUALIZADO AQUI
         with:
           name: production-files
           path: ./dist
@@ -39,13 +39,13 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4 # <<< ATUALIZADO AQUI
         with:
           name: production-files
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3 # Esta ação não é afetada pela depreciação dos artefatos
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist

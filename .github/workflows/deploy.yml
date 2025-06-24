@@ -12,15 +12,15 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2 # Esta versão do checkout ainda é válida e comum
+        uses: actions/checkout@v4 # Esta versão do checkout ainda é válida e comum
 
       - name: Setup Node
-        uses: actions/setup-node@v1 # Esta versão do setup-node ainda é válida e comum
+        uses: actions/setup-node@v4 # Esta versão do setup-node ainda é válida e comum
         with:
           node-version: 16
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1 # Esta ação específica não é afetada
+        uses: bahmutov/npm-install@v4 # Esta ação específica não é afetada
 
       - name: Build project
         run: npm run build
@@ -45,7 +45,7 @@ jobs:
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3 # Esta ação não é afetada pela depreciação dos artefatos
+        uses: peaceiris/actions-gh-pages@v4 # Esta ação não é afetada pela depreciação dos artefatos
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist

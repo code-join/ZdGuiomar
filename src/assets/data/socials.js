@@ -2,7 +2,7 @@ export const socials = [
 	{
 		id: 1,
 		name: 'youtube',
-		href: 'https://www.youtube.com/@ZedaGuiomar',
+		href: 'https://www.youtube.com/c/@Z%C3%A9daGuiomar',
 		icon: 'Youtube',
 	},
 	{

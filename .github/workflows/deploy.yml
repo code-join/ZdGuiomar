@@ -20,7 +20,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v4 # Esta ação específica não é afetada
+        uses: bahmutov/npm-install@v1 # Esta ação específica não é afetada
 
       - name: Build project
         run: npm run build
